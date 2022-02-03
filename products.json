@@ -1,0 +1,20 @@
+[
+    {
+        "name": "alfajor jorgito",
+        "price": 300,
+        "urlImage": "urlImage",
+        "id": 0
+    },
+    {
+        "name": "alfajor grandote",
+        "price": 750,
+        "urlImage": "urlImage",
+        "id": 1
+    },
+    {
+        "name": "alfajor fulbito",
+        "price": 25,
+        "urlImage": "urlImage",
+        "id": 2
+    }
+]
