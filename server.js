@@ -16,12 +16,21 @@ app.get('/', (req, res) =>{
     res.send('Bienvenido al servidor de Ash');
 })
 
-app.get('/products', (req, res) =>{
-    res.send( JSON.stringify(newClass.getAll() ));
-    console.log(newClass.getAll())
+app.get('/products', async (req, res) =>{
+
+    const products = await newClass.getAll();
+
+    res.send( JSON.stringify( products) );
 })
 
-app.get('/randomProduct', (req, res) =>{
-    res.send([1,2,3,4,5]);
+app.get('/randomProduct', async (req, res) =>{
+
+    const products = await newClass.getAll();
+
+    const random = Math.floor(Math.random() * products.length);
+
+    const product = await newClass.getById(random);
+
+    res.send( JSON.stringify( product) );
 })
 
